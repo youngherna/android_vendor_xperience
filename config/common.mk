@@ -155,3 +155,11 @@ $(foreach f,$(wildcard vendor/xperience/prebuilt/etc/init/*.rc),\
 # Optimize everything for preopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 
+# Skip boot JAR checks.
+SKIP_BOOT_JARS_CHECK := true
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
