@@ -127,6 +127,9 @@ $(call inherit-product, device/xperience/common/common.mk)
 # Additional packages
 -include vendor/xperience/config/packages.mk
 
+# Include definitions for Snapdragon Clang
+$(call inherit-product, vendor/qcom/sdclang/config/SnapdragonClang.mk)
+
 # SELinux Policy
 # -include vendor/xperience/sepolicy/sepolicy.mk
 
