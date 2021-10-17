@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 #    Settings \
 #    NightFallQuickStep \
 #    XPeriaWeather
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    Settings \
+    XPeriaWeather
 
 #-include vendor/qcom/common/perf/packages.mk
 
