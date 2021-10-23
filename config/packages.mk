@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RepainterServicePriv
 
+# Dummy for the weather
+PRODUCT_PACKAGES += \
+	com.sony.device
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
