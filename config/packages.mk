@@ -139,6 +139,13 @@ PRODUCT_PACKAGES += \
 
 #-include vendor/qcom/common/perf/packages.mk
 
+ifneq ($(strip $(TARGET_USES_RRO)),true)
+# enable overlays to use our version of
+# source/resources etc.
+DEVICE_PACKAGE_OVERLAYS += device/qcom/common/device/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/qcom/common/product/overlay
+endif
+
 # if exist track perf changes
 -include vendor/extras/extras.mk
 
