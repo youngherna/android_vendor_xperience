@@ -163,3 +163,7 @@ SKIP_BOOT_JARS_CHECK := true
 # leave less information available via JDWP.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
+# Increase volume level steps
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.config.media_vol_steps=30
+
