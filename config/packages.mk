@@ -134,7 +134,7 @@ endif
 #-include vendor/qcom/common/perf/packages.mk
 
 # if exist track perf changes
-#-include vendor/extras/extras.mk
+-include vendor/extras/extras.mk
 
 ifeq ($(WITH_GMS), true)
 
