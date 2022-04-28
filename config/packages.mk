@@ -82,12 +82,6 @@ PRODUCT_PACKAGES += \
 
 #endif
 
-#SetupWizard
-#ifneq ($(TARGET_BUILD_VARIANT), eng)
-#PRODUCT_PACKAGES += \
-#    XPerienceSetupWizard
-#endif
-
 PRODUCT_PACKAGES += \
     charger_res_images
 
@@ -164,7 +158,11 @@ endif #TARGET_USES_RRO
 
 ifeq ($(WITH_GMS), true)
 
--include vendor/gapps/pixel-gapps.mk
+# -include vendor/gapps/pixel-gapps.mk
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
+PRODUCT_PACKAGES += \
+    XPerienceSetupWizard
 
 endif
 
